@@ -11,7 +11,8 @@ export default {
     },
     extend: {
       colors: {
-        'primary': '#8964b0'
+        'light-purple': '#8964b0',
+        'dark-purple': '#140524',
       }
     },
   },

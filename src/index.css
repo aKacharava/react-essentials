@@ -33,7 +33,7 @@ h2
 
 p {
     @apply
-    text-primary;
+    text-light-purple;
 }
 
 header h1 {
