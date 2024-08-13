@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'primary': ['Quicksand'],
+      'secondary': ['"Roboto Condensed"'],
+    },
+    extend: {
+      colors: {
+        'primary': '#8964b0'
+      }
+    },
   },
   plugins: [],
 }

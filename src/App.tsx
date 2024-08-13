@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+function Header(
+    {
+        dynamicText
+    }: {
+        dynamicText: string
+    }
+) {
+    const reactDescriptions: string[] = ['Fundemental', 'Core', 'Crucial'];
+
+    function genRandomInt(max: number): number {
+        return Math.floor(Math.random() * (max + 1));
+    }
+
+    const description = reactDescriptions[genRandomInt(2)];
+
+    return (
+        <header className="flex flex-col items-center text-center mx-12 mb-10">
+            <img
+                src="https://images.pexels.com/photos/27054232/pexels-photo-27054232/free-photo-of-licht-fel-luchtig-zee.jpeg"
+                alt="Pexels Photo"
+                className="w-1/3 object-cover"
+            />
+            <h1 className="m-0 text-7xl">
+                React Essentials
+            </h1>
+            <p>
+                { description } React concepts you will need to learn!
+            </p>
+            <p className="m-0 text-lg">
+                { dynamicText } ipsum dolor sit amet, consectetur adipiscing elit. Cras ac quam vehicula ipsum vulputate ultrices.
+                Morbi ullamcorper faucibus lobortis. Sed.
+            </p>
+        </header>
+    );
+}
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button className="bg-red-500" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <>
+            <Header dynamicText="some text" />
+            <main className="w-10/12 max-w-4xl m-auto">
+                <h2 className="text-center text-2xl">
+                    Lets get started!
+                </h2>
+            </main>
+        </>
+    )
 }
 
 export default App
