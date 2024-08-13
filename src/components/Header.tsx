@@ -1,3 +1,5 @@
+import reactConcepts from '../assets/react-core-concepts.png';
+
 export function Header(
     {
         dynamicText
@@ -16,9 +18,9 @@ export function Header(
     return (
         <header className="flex flex-col items-center text-center mx-12 mb-10">
             <img
-                src="https://images.pexels.com/photos/27054232/pexels-photo-27054232/free-photo-of-licht-fel-luchtig-zee.jpeg"
+                src={ reactConcepts }
                 alt="Pexels Photo"
-                className="w-1/3 object-cover"
+                className="w-1/5 object-cover"
             />
             <h1 className="m-0 text-7xl">
                 React Essentials
