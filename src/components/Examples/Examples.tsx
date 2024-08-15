@@ -56,7 +56,7 @@ export default function Examples() {
 
     return (
         <Section title="Examples" className="mx-12">
-            <Tabs buttons={buttons}>
+            <Tabs buttons={buttons} buttonsContainer="menu">
                 {tabContent}
             </Tabs>
         </Section>
