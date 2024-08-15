@@ -1,3 +1,4 @@
+import './Header.css';
 import reactConcepts from '../../assets/react-core-concepts.png';
 
 export function Header(
