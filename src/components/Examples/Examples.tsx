@@ -28,7 +28,7 @@ export default function Examples() {
 
     return (
         <Section title="Examples" className="mx-12">
-            <menu className="mx-4 mb-2 p-0 flex gap-2 list-none">
+            <menu className="mb-2 p-0 flex gap-2 list-none">
                 <TabButton
                     onSelect={() => handleSelect('components')}
                     isSelected={selectedTopic === 'components'}
