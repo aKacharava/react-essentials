@@ -5,17 +5,6 @@ import { CoreConceptData } from "./interfaces.ts";
 import TabButton from "./components/TabButton/TabButton.tsx";
 import { useState } from "react";
 
-const concepts = CORE_CONCEPTS.map(
-    (coreConcept: CoreConceptData, index: number) => {
-        return <CoreConcept
-            image={coreConcept.image}
-            title={coreConcept.title}
-            description={coreConcept.description}
-            key={index}
-        />
-    }
-);
-
 function App() {
     const [selectedTopic, setSelectedTopic] = useState<ExampleKey>();
 
@@ -46,7 +35,17 @@ function App() {
                 <section className="p-12 text-center bg-darker-purple flex flex-col justify-center items-center">
                     <h2 className="text-3xl text-lighter-purple">Core Concepts</h2>
                     <ul className="flex justify-between items-center w-full">
-                        { concepts }
+                        {
+                            CORE_CONCEPTS.map(
+                                (coreConcept: CoreConceptData, index: number) => {
+                                    return <CoreConcept
+                                        image={coreConcept.image}
+                                        title={coreConcept.title}
+                                        description={coreConcept.description}
+                                        key={index}
+                                    />
+                                })
+                        }
                     </ul>
                 </section>
                 <section className="mx-12">
