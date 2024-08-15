@@ -1,4 +1,4 @@
-import reactConcepts from '../assets/react-core-concepts.png';
+import reactConcepts from '../../assets/react-core-concepts.png';
 
 export function Header(
     {

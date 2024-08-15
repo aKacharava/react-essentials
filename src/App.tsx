@@ -1,5 +1,5 @@
-import { Header } from "./components/Header.tsx";
-import { CoreConcept } from "./components/CoreConcept.tsx";
+import { Header } from "./components/Header/Header.tsx";
+import { CoreConcept } from "./components/CoreConcept/CoreConcept.tsx";
 import { CORE_CONCEPTS } from "./data.ts";
 
 const concepts = CORE_CONCEPTS.map(
