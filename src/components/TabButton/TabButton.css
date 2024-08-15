@@ -11,3 +11,9 @@
     hover:bg-dark-purple
     hover:text-slate-white;
 }
+
+.active {
+    @apply
+    bg-bright-purple
+    text-slate-white;
+}
