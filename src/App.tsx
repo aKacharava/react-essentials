@@ -2,6 +2,7 @@ import { Header } from "./components/Header/Header.tsx";
 import { CoreConcept } from "./components/CoreConcept/CoreConcept.tsx";
 import { CORE_CONCEPTS } from "./data.ts";
 import TabButton from "./components/TabButton/TabButton.tsx";
+import { useState } from "react";
 
 const concepts = CORE_CONCEPTS.map(
     (coreConcept: { image: string, description: string, title: string }, index: number) => {
@@ -15,6 +16,13 @@ const concepts = CORE_CONCEPTS.map(
 )
 
 function App() {
+    const [selectedTopic, setSelectedTopic] = useState('Please click a button')
+
+    function handleSelect(selectedButton: string) {
+        setSelectedTopic(selectedButton);
+        console.log("Select something" , selectedTopic);
+    }
+
     return (
         <>
             <Header dynamicText="some text" />
@@ -28,11 +36,12 @@ function App() {
                 <section className="mx-12">
                     <h2 className="text-xl my-10 text-left text-lighter-purple">Examples</h2>
                     <menu className="mx-4 p-0 flex gap-2 list-none">
-                        <TabButton>Some Example</TabButton>
-                        <TabButton>JSX</TabButton>
-                        <TabButton>Props</TabButton>
-                        <TabButton>State</TabButton>
+                        <TabButton onSelect={() => handleSelect('components')}>Some Example</TabButton>
+                        <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+                        <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+                        <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
                     </menu>
+                    { selectedTopic }
                 </section>
             </main>
         </>
