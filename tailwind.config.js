@@ -12,7 +12,10 @@ export default {
     extend: {
       colors: {
         'light-purple': '#8964b0',
-        'dark-purple': '#140524',
+        'lighter-purple': '#a18aba',
+        'dark-purple': '#1b082f',
+        'darker-purple': '#140524',
+        'slate-white': '#ebe7ef',
       }
     },
   },
