@@ -1,0 +1,13 @@
+.tab-button {
+    @apply
+    px-2
+    py-4
+    rounded-lg
+    text-lighter-purple
+    font-secondary
+    text-xs
+    transition-all
+    duration-200
+    hover:bg-dark-purple
+    hover:text-slate-white;
+}
