@@ -1,11 +1,12 @@
 import { Header } from "./components/Header/Header.tsx";
 import { CoreConcept } from "./components/CoreConcept/CoreConcept.tsx";
-import {CORE_CONCEPTS, ExampleKey, EXAMPLES} from "./data.ts";
+import { CORE_CONCEPTS, ExampleKey, EXAMPLES } from "./data.ts";
+import { CoreConceptData } from "./interfaces.ts";
 import TabButton from "./components/TabButton/TabButton.tsx";
 import { useState } from "react";
 
 const concepts = CORE_CONCEPTS.map(
-    (coreConcept: { image: string, description: string, title: string }, index: number) => {
+    (coreConcept: CoreConceptData, index: number) => {
         return <CoreConcept
             image={coreConcept.image}
             title={coreConcept.title}

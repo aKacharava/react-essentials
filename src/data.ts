@@ -1,11 +1,11 @@
 import components from './assets/components.png';
 import config from './assets/config.png';
 import jsxUi from './assets/jsx-ui.png';
-import { CoreConcept, Examples } from "./interfaces.ts";
+import { CoreConceptData, ExamplesData } from "./interfaces.ts";
 
 export type ExampleKey = keyof typeof EXAMPLES;
 
-export const CORE_CONCEPTS:(CoreConcept)[] = [
+export const CORE_CONCEPTS:(CoreConceptData)[] = [
     {
         image: components,
         title: 'Concept 1',
@@ -23,7 +23,7 @@ export const CORE_CONCEPTS:(CoreConcept)[] = [
     }
 ];
 
-export const EXAMPLES: Examples = {
+export const EXAMPLES: ExamplesData = {
     components: {
         title: 'Components',
         description:
