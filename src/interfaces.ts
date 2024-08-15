@@ -1,3 +1,5 @@
+import { ComponentPropsWithoutRef, ReactNode } from "react";
+
 interface ExampleData {
     title: string;
     description: string;
@@ -15,4 +17,8 @@ export interface ExamplesData {
     jsx: ExampleData;
     props: ExampleData;
     state: ExampleData;
+}
+
+export interface SectionGroupProps extends ComponentPropsWithoutRef<"section"> {
+    children: ReactNode;
 }

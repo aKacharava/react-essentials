@@ -1,6 +1,7 @@
 import TabButton from "../TabButton/TabButton.tsx";
 import { useState } from "react";
 import { ExampleKey, EXAMPLES } from "../../data.ts";
+import Section from "../Section/Section.tsx";
 
 export default function Examples() {
     const [selectedTopic, setSelectedTopic] = useState<ExampleKey>();
@@ -26,8 +27,7 @@ export default function Examples() {
     }
 
     return (
-        <section className="mx-12">
-            <h2 className="text-xl my-10 text-left text-lighter-purple">Examples</h2>
+        <Section title="Examples" className="mx-12">
             <menu className="mx-4 mb-2 p-0 flex gap-2 list-none">
                 <TabButton
                     onSelect={() => handleSelect('components')}
@@ -55,6 +55,6 @@ export default function Examples() {
                 </TabButton>
             </menu>
             { tabContent }
-        </section>
+        </Section>
     );
 }

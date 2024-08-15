@@ -1,11 +1,11 @@
 import { CORE_CONCEPTS } from "../../data.ts";
 import { CoreConceptData } from "../../interfaces.ts";
 import { CoreConcept } from "../CoreConcept/CoreConcept.tsx";
+import Section from "../Section/Section.tsx";
 
 export default function CoreConcepts() {
     return (
-        <section className="p-12 text-center bg-darker-purple flex flex-col justify-center items-center">
-            <h2 className="text-3xl text-lighter-purple">Core Concepts</h2>
+        <Section title="Core Concepts" className="p-12 text-center bg-darker-purple flex flex-col justify-center items-center">
             <ul className="flex justify-between items-center w-full">
                 {
                     CORE_CONCEPTS.map(
@@ -19,6 +19,6 @@ export default function CoreConcepts() {
                         })
                 }
             </ul>
-        </section>
+        </Section>
     );
 }
