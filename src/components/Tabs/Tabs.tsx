@@ -4,10 +4,10 @@ export default function Tabs(
     props:{
         children: React.ReactNode,
         buttons: React.ReactNode,
-        buttonsContainer: ElementType,
+        buttonsContainer?: ElementType,
     }
 ) {
-    const ButtonContainer: ElementType = props.buttonsContainer;
+    const ButtonContainer: ElementType = props.buttonsContainer ?? 'menu';
 
     return(
         <>
